@@ -1,5 +1,4 @@
-# -- mudar nome do projeto --
-import pynamicalsys, numpy as pd, matplotlib.pyplot as plt, seaborn as sns
+import pynamicalsys, numpy as pd, matplotlib.pyplot as plt, seaborn as sns
 from pynamicalsys import ContinuousDynamicalSystem as cds
 from pynamicalsys import PlotStyler
 
@@ -16,14 +15,7 @@ trajectory = ds.trajectory(u, tempo_total, parameters = parameters)
 
 print(trajectory.shape)
 
-ps = PlotStyler(linewidth = 0.5)
-ps.apply_style()
 
-plt.plot(trajectory[:, 1], trajectory[:, 3], "k-")
-
-plt.xlabel("$x$")
-plt.ylabel("$y$")
-plt.show
 
 ps = PlotStyler(fontsize=18, linewidth=0.3)  # Style for attractor plot
 ps.apply_style()
