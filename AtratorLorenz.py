@@ -1,4 +1,4 @@
-import pynamicalsys, numpy as pd, matplotlib.pyplot as plt, seaborn as sns
+import pynamicalsys, numpy as pd, matplotlib.pyplot as plt, seaborn as sns
 from pynamicalsys import ContinuousDynamicalSystem as cds
 from pynamicalsys import PlotStyler
 
@@ -17,13 +17,12 @@ print(trajectory.shape)
 
 
 
-ps = PlotStyler(fontsize=18, linewidth=0.3)  # Style for attractor plot
+ps = PlotStyler(fontsize=18, linewidth=0.3)  
 ps.apply_style()
-
-# Plot the Lorenz attractor projection on the x-z plane
+
 plt.plot(trajectory[:, 1], trajectory[:, 3], "k-")
 
 plt.xlabel("$x$")
 plt.ylabel("$z$")
 
-plt.show()  # Display the attractor plot
+plt.show()  
